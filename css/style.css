@@ -1,0 +1,14 @@
+body {
+    background: rgba(255, 0, 0, 0.5);
+    color: #0af;
+}
+body > header > h3 {
+    background: #fff;
+    color: black;
+}
+h3 {
+    color: black;
+}
+body h3 {
+    color: aqua;
+}
