@@ -3,10 +3,11 @@ this is for multi-line
 comment.
 */
 let btn = document.getElementById("go-button");
+let nameOfUser = document.getElementById("my-input");
 function clickedOnButton(){
     console.log("Clicked on button");
     btn.removeEventListener("click",clickedOnButton);
-    document.getElementById("text").innerHTML="<b>Don't</b> do it!!"
+    document.getElementById("text").innerHTML= "Hello, " + nameOfUser.value;
 }
 btn.addEventListener("click",clickedOnButton);
 //replace content after clicking the button...
@@ -21,11 +22,14 @@ let hobbies = ["pizza","Gamming","Readding","Programming","music"];
 console.log(hobbies.pop());
 hobbies.push("Archari");
 //loop through array
-hobbies.forEach(function(item){
-    console.log("I like",item);
-});
-let indexNum = hobbies.indexOf("Gamming");
-hobbies.splice(indexNum,1);
-hobbies.forEach(function(i,e){
-    console.log("I like",i,e);
-})
+// hobbies.forEach(function(item){
+//     console.log("I like",item);
+// });
+// let indexNum = hobbies.indexOf("Gamming");
+// hobbies.splice(indexNum,1);
+// hobbies.forEach(function(i,e){
+//     console.log("I like",i,e);
+// });
+if(hobbies.indexOf("Programming")>-1){
+    console.log("I love programming...");
+}
