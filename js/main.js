@@ -4,10 +4,11 @@ comment.
 */
 let btn = document.getElementById("go-button");
 let nameOfUser = document.getElementById("my-input");
+let myTextArea = document.getElementById("my-textarea");
 function clickedOnButton(){
     console.log("Clicked on button");
-    btn.removeEventListener("click",clickedOnButton);
-    document.getElementById("text").innerHTML= "Hello, " + nameOfUser.value;
+    // btn.removeEventListener("click",clickedOnButton);
+    document.getElementById("text").innerHTML= "Hello, " + nameOfUser.value+"<br/> Message: "+myTextArea.value;
 }
 btn.addEventListener("click",clickedOnButton);
 //replace content after clicking the button...
