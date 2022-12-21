@@ -57,7 +57,6 @@ article:hover{
     background-size: cover !important;
     background-position: center;
     border-top-left-radius: 50px;
-
 }
 article a{
     text-decoration: underline overline line-through;
