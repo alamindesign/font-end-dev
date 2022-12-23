@@ -49,3 +49,34 @@ let text1 = "This is a text to check it's len";
 let text2 = "This is the second text to check the lenth"
 let lent = lenthOfText({phese2:text2});
 console.log(lent);
+//find the missing numbers:
+let numbers = [20,19,17,18,16,15,14,13,12,11,10,9,8,7,5,4,3,2,1];
+numbers.sort(function(a,b){return a-b});
+function missingNumber(numbers){
+    let missing = -1;
+    for(var i = 1;i<numbers.length;i++){
+        if(numbers.indexOf(i) === -1){
+            missing = i;
+        }
+    }
+    return missing;
+}
+console.log(missingNumber(numbers));
+//class
+class Animal {
+    constructor(name,height,weight){
+        this.name = name;
+        this.height = height;
+        this.weight = weight;
+    }
+    lengthOfname(){
+        return this.name.length;
+    }
+}
+Animal.planet = "Earth";
+let dog = new Animal("forito","90 cm","10 kg");
+let fish = new Animal("rito","10 cm",".02 kg");
+console.log(dog.name);
+console.log(fish.name);
+console.log(dog.constructor.planet);
+console.log(dog.lengthOfname());
