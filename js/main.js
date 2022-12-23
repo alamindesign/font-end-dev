@@ -34,10 +34,18 @@ hobbies.push("Archari");
 if(hobbies.indexOf("Programming")>-1){
     console.log("I love programming...");
 }
-function lenthOfText(phese){
-    let len = phese.length;
+//pussing object to a function....
+function lenthOfText(phreses){
+    let len = 0;
+    if(typeof phreses.phese !=="undefined"){
+        len = phreses.phese.length;
+    }
+    if(typeof phreses.phese2 !== "undefined"){
+        len+=phreses.phese2.length;
+    }
     return len;
 }
 let text1 = "This is a text to check it's len";
-let lent = lenthOfText(text1);
+let text2 = "This is the second text to check the lenth"
+let lent = lenthOfText({phese2:text2});
 console.log(lent);
